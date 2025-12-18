@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Essentials -->
+    <title>Privacy Policy - Syrian Flavors</title>
+    <meta name="description" content="Privacy Policy for Syrian Flavors website. Learn how we collect, use, and protect your personal information when you visit our website.">
+    <meta name="keywords" content="privacy policy, Syrian Flavors, data protection, personal information, GDPR compliance">
+    <meta name="author" content="Syrian Flavors">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Privacy Policy - Syrian Flavors">
+    <meta property="og:description" content="Privacy Policy for Syrian Flavors website. Learn how we collect, use, and protect your personal information.">
+    <meta property="og:url" content="https://syrianflavors.com/privacy-policy.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://syrianflavors.com/privacy-policy.html">
+    
+    <!-- CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #c9302c;
+            --secondary-color: #f8f5f0;
+            --accent-color: #e67e22;
+            --text-color: #333;
+            --light-text: #777;
+            --header-font: 'Playfair Display', serif;
+            --body-font: 'Lato', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-family: var(--header-font);
+            font-size: 28px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: var(--light-text);
+            margin: 0 10px;
+        }
+
+        /* Policy Section */
+        .policy-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-family: var(--header-font);
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--light-text);
+            font-size: 18px;
+        }
+
+        .policy-content {
+            background-color: var(--secondary-color);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .policy-content h2 {
+            font-family: var(--header-font);
+            font-size: 28px;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+
+        .policy-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .policy-content h3 {
+            font-size: 22px;
+            margin: 25px 0 10px;
+            color: var(--text-color);
+        }
+
+        .policy-content p {
+            margin-bottom: 15px;
+        }
+
+        .policy-content ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .policy-content li {
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--light-text);
+            font-style: italic;
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-family: var(--header-font);
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p {
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        .legal-links {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .legal-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .legal-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s;
+                z-index: 99;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .policy-content {
+                padding: 25px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Syrian Flavors</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#recipes">Recipes</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span>Privacy Policy</span>
+        </div>
+    </div>
+
+    <!-- Policy Section -->
+    <section class="policy-section">
+        <div class="container">
+            <h1 class="section-title">Privacy Policy</h1>
+            <p class="section-subtitle">Your privacy is important to us. This Privacy Policy explains how Syrian Flavors collects, uses, and protects your information when you visit our website.</p>
+            
+            <div class="policy-content">
+                <h2>1. Information We Collect</h2>
+                <p>We may collect several types of information from and about users of our website:</p>
+                <ul>
+                    <li>Information you provide directly to us, such as when you subscribe to our newsletter, fill out a contact form, or submit a recipe.</li>
+                    <li>Information automatically collected when you visit our website, including IP address, browser type, and access times.</li>
+                    <li>Information collected through cookies and similar tracking technologies.</li>
+                </ul>
+                
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the information we collect in the following ways:</p>
+                <ul>
+                    <li>To provide, maintain, and improve our services</li>
+                    <li>To respond to your inquiries and provide customer support</li>
+                    <li>To send you newsletters, marketing communications, and other information that may be of interest to you</li>
+                    <li>To monitor and analyze trends and usage of our website</li>
+                    <li>To detect, investigate, and prevent security incidents and fraudulent activity</li>
+                </ul>
+                
+                <h2>3. Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
+                
+                <h2>3.1. Types of Cookies We Use</h2>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> These are necessary for the website to function and cannot be switched off in our systems.</li>
+                    <li><strong>Performance Cookies:</strong> These allow us to count visits and traffic sources so we can measure and improve the performance of our site.</li>
+                    <li><strong>Functional Cookies:</strong> These enable enhanced functionality and personalization, such as videos and live chats.</li>
+                    <li><strong>Targeting Cookies:</strong> These may be set through our site by our advertising partners to build a profile of your interests.</li>
+                </ul>
+                
+                <h2>4. Third-Party Services</h2>
+                <p>Our website may contain links to third-party websites, products, and services. We are not responsible for the privacy practices of these third parties. We encourage you to be aware when you leave our site and to read the privacy statements of each website that collects personally identifiable information.</p>
+                
+                <h2>5. Google AdSense</h2>
+                <p>We use Google AdSense to display advertisements on our website. Google AdSense uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank">Ads Settings</a>.</p>
+                
+                <h2>6. Amazon Affiliate Program</h2>
+                <p>Syrian Flavors is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Amazon may collect information about your use of our site as part of their affiliate program.</p>
+                
+                <h2>7. Data Security</h2>
+                <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+                
+                <h2>8. Children's Privacy</h2>
+                <p>Our website is not intended for children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you believe your child has provided us with personal information, please contact us.</p>
+                
+                <h2>9. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the bottom of this policy.</p>
+                
+                <h2>10. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                <ul>
+                    <li>By email: info@syrianflavors.com</li>
+                    <li>By phone: +1 (555) 123-4567</li>
+                    <li>By mail: 123 Culinary Street, Flavor City, FC 12345</li>
+                </ul>
+                
+                <p class="last-updated">Last Updated: October 15, 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Syrian Flavors</h3>
+                    <p>Discover the authentic tastes of Syria with our collection of traditional recipes passed down through generations.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#recipes">Recipes</a></li>
+                        <li><a href="index.html#about">About Syrian Cuisine</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Recipes</h3>
+                    <ul>
+                        <li><a href="kibbeh.html">Kibbeh</a></li>
+                        <li><a href="yabrak.html">Yabrak</a></li>
+                        <li><a href="fattoush.html">Fattoush</a></li>
+                        <li><a href="shawarma.html">Shawarma</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: info@syrianflavors.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Culinary Street<br>Flavor City, FC 12345</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Syrian Flavors. All rights reserved.</p>
+            </div>
+            
+            <div class="legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

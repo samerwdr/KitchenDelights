@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://syrianflavors.com/sitemap.xml
+
+# Disallow specific directories or files if needed
+# Disallow: /private/
+# Disallow: /admin/
