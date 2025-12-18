@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Essentials -->
+    <title>Syrian Flavors - Authentic Syrian Cuisine Recipes & Traditional Dishes</title>
+    <meta name="description" content="Discover authentic Syrian cuisine with our collection of traditional recipes. From Kibbeh to Shawarma, explore the rich flavors of Syria passed down through generations.">
+    <meta name="keywords" content="Syrian cuisine, Syrian recipes, Middle Eastern food, Kibbeh, Shawarma, Yabrak, Fattoush, Mujaddara, Makloubeh, traditional Syrian dishes, Levantine cooking, Arabic food">
+    <meta name="author" content="Syrian Flavors">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Syrian Flavors - Authentic Syrian Cuisine Recipes">
+    <meta property="og:description" content="Discover authentic Syrian cuisine with our collection of traditional recipes. From Kibbeh to Shawarma, explore the rich flavors of Syria.">
+    <meta property="og:image" content="https://picsum.photos/seed/syrianfood/1200/630.jpg">
+    <meta property="og:url" content="https://syrianflavors.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Syrian Flavors - Authentic Syrian Cuisine Recipes">
+    <meta name="twitter:description" content="Discover authentic Syrian cuisine with our collection of traditional recipes. From Kibbeh to Shawarma, explore the rich flavors of Syria.">
+    <meta name="twitter:image" content="https://picsum.photos/seed/syrianfood/1200/630.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://syrianflavors.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #c9302c;
+            --secondary-color: #f8f5f0;
+            --accent-color: #e67e22;
+            --text-color: #333;
+            --light-text: #777;
+            --header-font: 'Playfair Display', serif;
+            --body-font: 'Lato', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-family: var(--header-font);
+            font-size: 28px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/syrianfood/1920/800.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: var(--header-font);
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease 1s both;
+        }
+
+        .btn:hover {
+            background-color: #a02622;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: var(--header-font);
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            color: var(--light-text);
+            font-size: 18px;
+        }
+
+        /* Featured Recipes */
+        .featured-recipes {
+            background-color: var(--secondary-color);
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .recipe-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 25px;
+        }
+
+        .recipe-title {
+            font-family: var(--header-font);
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .recipe-description {
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .recipe-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--light-text);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .recipe-meta span {
+            display: flex;
+            align-items: center;
+        }
+
+        .recipe-meta span::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            background-size: contain;
+        }
+
+        .prep-time::before {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23777"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>');
+        }
+
+        .cook-time::before {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23777"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>');
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+
+        .read-more:hover {
+            color: var(--accent-color);
+        }
+
+        .read-more:hover::after {
+            transform: translateX(5px);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--secondary-color);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-family: var(--header-font);
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p {
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        .legal-links {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .legal-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .legal-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s;
+                z-index: 99;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                height: 500px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Syrian Flavors</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#recipes">Recipes</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover the Rich Flavors of Syrian Cuisine</h1>
+            <p>Explore authentic recipes passed down through generations, bringing the taste of Syria to your kitchen</p>
+            <a href="#recipes" class="btn">Explore Recipes</a>
+        </div>
+    </section>
+
+    <!-- Featured Recipes Section -->
+    <section id="recipes" class="featured-recipes">
+        <div class="container">
+            <h2 class="section-title">Traditional Syrian Recipes</h2>
+            <p class="section-subtitle">Discover the authentic flavors of Syria with our collection of traditional recipes, from savory main dishes to refreshing salads</p>
+            
+            <div class="recipe-grid">
+                <!-- Kibbeh Recipe -->
+                <article class="recipe-card">
+                    <img src="https://picsum.photos/seed/kibbeh/600/400.jpg" alt="Kibbeh" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Kibbeh</h3>
+                        <p class="recipe-description">Syria's national dish made of bulgur, minced onions, and finely ground lean beef, lamb, goat, or camel meat.</p>
+                        <div class="recipe-meta">
+                            <span class="prep-time">Prep: 30 min</span>
+                            <span class="cook-time">Cook: 45 min</span>
+                        </div>
+                        <a href="kibbeh.html" class="read-more">View Recipe</a>
+                    </div>
+                </article>
+
+                <!-- Yabrak Recipe -->
+                <article class="recipe-card">
+                    <img src="https://picsum.photos/seed/yabrak/600/400.jpg" alt="Yabrak" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Yabrak (Stuffed Grape Leaves)</h3>
+                        <p class="recipe-description">Tender grape leaves stuffed with a flavorful mixture of rice, herbs, and sometimes ground meat.</p>
+                        <div class="recipe-meta">
+                            <span class="prep-time">Prep: 45 min</span>
+                            <span class="cook-time">Cook: 60 min</span>
+                        </div>
+                        <a href="yabrak.html" class="read-more">View Recipe</a>
+                    </div>
+                </article>
+
+                <!-- Fattoush Recipe -->
+                <article class="recipe-card">
+                    <img src="https://picsum.photos/seed/fattoush/600/400.jpg" alt="Fattoush" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Fattoush</h3>
+                        <p class="recipe-description">A refreshing Levantine bread salad made with toasted or fried pieces of pita bread combined with mixed greens and vegetables.</p>
+                        <div class="recipe-meta">
+                            <span class="prep-time">Prep: 20 min</span>
+                            <span class="cook-time">Cook: 10 min</span>
+                        </div>
+                        <a href="fattoush.html" class="read-more">View Recipe</a>
+                    </div>
+                </article>
+
+                <!-- Shawarma Recipe -->
+                <article class="recipe-card">
+                    <img src="https://picsum.photos/seed/shawarma/600/400.jpg" alt="Shawarma" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Shawarma</h3>
+                        <p class="recipe-description">Thinly cut cuts of meat like chicken, beef, or lamb, stacked in a cone-like shape on a vertical rotisserie.</p>
+                        <div class="recipe-meta">
+                            <span class="prep-time">Prep: 40 min</span>
+                            <span class="cook-time">Cook: 30 min</span>
+                        </div>
+                        <a href="shawarma.html" class="read-more">View Recipe</a>
+                    </div>
+                </article>
+
+                <!-- Mujaddara Recipe -->
+                <article class="recipe-card">
+                    <img src="https://picsum.photos/seed/mujaddara/600/400.jpg" alt="Mujaddara" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Mujaddara</h3>
+                        <p class="recipe-description">A comforting dish of lentils and rice topped with crispy fried onions, a staple across the Levant.</p>
+                        <div class="recipe-meta">
+                            <span class="prep-time">Prep: 15 min</span>
+                            <span class="cook-time">Cook: 45 min</span>
+                        </div>
+                        <a href="mujaddara.html" class="read-more">View Recipe</a>
+                    </div>
+                </article>
+
+                <!-- Makloubeh Recipe -->
+                <article class="recipe-card">
+                    <img src="https://picsum.photos/seed/makloubeh/600/400.jpg" alt="Makloubeh" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Makloubeh</h3>
+                        <p class="recipe-description">A celebrated Palestinian and Jordanian dish popular in Syria, featuring meat, rice, and fried vegetables placed in a pot, then flipped upside down when served.</p>
+                        <div class="recipe-meta">
+                            <span class="prep-time">Prep: 40 min</span>
+                            <span class="cook-time">Cook: 60 min</span>
+                        </div>
+                        <a href="makloubeh.html" class="read-more">View Recipe</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Syrian Cuisine</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Syrian cuisine is a rich tapestry of flavors, textures, and traditions that have evolved over thousands of years. Situated at the crossroads of ancient trade routes, Syria has absorbed culinary influences from Persia, Turkey, the Arab world, and the Mediterranean, creating a distinctive and diverse food culture.</p>
+                    
+                    <p>At the heart of Syrian cooking is the use of fresh, seasonal ingredients. Olive oil, garlic, onions, lemon, and a variety of herbs and spices form the foundation of many dishes. Syrian cuisine is known for its mezze - an array of small dishes served as appetizers or as part of a larger meal, featuring everything from creamy hummus to smoky baba ghanoush.</p>
+                    
+                    <p>Food plays a central role in Syrian social life and hospitality. Meals are a time for family and friends to gather, share stories, and connect. Whether it's a simple weekday dinner or an elaborate feast for a celebration, Syrian cuisine brings people together through its rich flavors and warm traditions.</p>
+                    
+                    <p>Through this blog, we hope to share the authentic flavors of Syria with you, preserving these treasured recipes and passing them on to future generations. Welcome to our culinary journey through the heart of the Levant.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/syriankitchen/600/500.jpg" alt="Syrian Kitchen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Syrian Flavors</h3>
+                    <p>Discover the authentic tastes of Syria with our collection of traditional recipes passed down through generations.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#recipes">Recipes</a></li>
+                        <li><a href="#about">About Syrian Cuisine</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Recipes</h3>
+                    <ul>
+                        <li><a href="kibbeh.html">Kibbeh</a></li>
+                        <li><a href="yabrak.html">Yabrak</a></li>
+                        <li><a href="fattoush.html">Fattoush</a></li>
+                        <li><a href="shawarma.html">Shawarma</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: info@syrianflavors.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Culinary Street<br>Flavor City, FC 12345</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Syrian Flavors. All rights reserved.</p>
+            </div>
+            
+            <div class="legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#') return;
+                
+                e.preventDefault();
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mainNav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
