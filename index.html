@@ -14,7 +14,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Syrian Flavors - Authentic Syrian Cuisine Recipes">
     <meta property="og:description" content="Discover authentic Syrian cuisine with our collection of traditional recipes. From Kibbeh to Shawarma, explore the rich flavors of Syria.">
-    <meta property="og:image" content="https://picsum.photos/seed/syrianfood/1200/630.jpg">
+    <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/a1b67689-383e-4d18-91ba-f34b6126d3a4.png?auth_key=1866018453-2002f91446684d8f980f1f9919e782ef-0-cd7a7fd5554851ed7c850464176a275d">
     <meta property="og:url" content="https://syrianflavors.com">
     <meta property="og:type" content="website">
     
@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Syrian Flavors - Authentic Syrian Cuisine Recipes">
     <meta name="twitter:description" content="Discover authentic Syrian cuisine with our collection of traditional recipes. From Kibbeh to Shawarma, explore the rich flavors of Syria.">
-    <meta name="twitter:image" content="https://picsum.photos/seed/syrianfood/1200/630.jpg">
+    <meta name="twitter:image" content="https://z-cdn-media.chatglm.cn/files/a1b67689-383e-4d18-91ba-f34b6126d3a4.png?auth_key=1866018453-2002f91446684d8f980f1f9919e782ef-0-cd7a7fd5554851ed7c850464176a275d">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://syrianflavors.com">
@@ -123,12 +123,35 @@
             width: 100%;
         }
 
-        /* Hero Section */
-        .hero {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/syrianfood/1920/800.jpg');
+        /* Hero Slider Section */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Adjust height as needed */
+            overflow: hidden;
+        }
+
+        .slides-wrapper {
+            display: flex;
+            transition: transform 0.7s ease-in-out;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
             background-size: cover;
             background-position: center;
-            height: 600px;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -136,22 +159,20 @@
             color: white;
         }
 
-        .hero-content {
+        .slide-content {
             max-width: 800px;
             padding: 0 20px;
         }
 
-        .hero h1 {
+        .slide-content h1 {
             font-family: var(--header-font);
             font-size: 60px;
             margin-bottom: 20px;
-            animation: fadeInDown 1s ease;
         }
 
-        .hero p {
+        .slide-content p {
             font-size: 20px;
             margin-bottom: 30px;
-            animation: fadeInUp 1s ease 0.5s both;
         }
 
         .btn {
@@ -163,13 +184,64 @@
             border-radius: 5px;
             font-weight: 600;
             transition: all 0.3s;
-            animation: fadeInUp 1s ease 1s both;
         }
 
         .btn:hover {
             background-color: #a02622;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Slider Navigation */
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            z-index: 10;
+        }
+
+        .slider-nav:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .slider-prev {
+            left: 20px;
+        }
+
+        .slider-next {
+            right: 20px;
+        }
+
+        /* Slider Dots */
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: white;
         }
 
         /* Section Styles */
@@ -432,36 +504,13 @@
             transition: all 0.3s;
         }
 
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* Responsive Design */
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
             }
             
-            .hero h1 {
+            .slide-content h1 {
                 font-size: 42px;
             }
             
@@ -506,15 +555,15 @@
                 grid-template-columns: 1fr;
             }
             
-            .hero {
-                height: 500px;
+            .hero-slider {
+                height: 60vh;
             }
             
-            .hero h1 {
+            .slide-content h1 {
                 font-size: 32px;
             }
             
-            .hero p {
+            .slide-content p {
                 font-size: 16px;
             }
         }
@@ -543,12 +592,77 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Discover the Rich Flavors of Syrian Cuisine</h1>
-            <p>Explore authentic recipes passed down through generations, bringing the taste of Syria to your kitchen</p>
-            <a href="#recipes" class="btn">Explore Recipes</a>
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="slides-wrapper">
+            <!-- Slide 1: Yabrak -->
+            <div class="slide" style="background-image: url('https://z-cdn-media.chatglm.cn/files/a1b67689-383e-4d18-91ba-f34b6126d3a4.png?auth_key=1866018453-2002f91446684d8f980f1f9919e782ef-0-cd7a7fd5554851ed7c850464176a275d');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1>Yabrak (Stuffed Grape Leaves)</h1>
+                        <p>A timeless classic, tender grape leaves wrapped around a fragrant mix of rice, herbs, and spices.</p>
+                        <a href="#recipes" class="btn">Explore Recipes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Kibbeh -->
+            <div class="slide" style="background-image: url('https://picsum.photos/seed/kibbeh-dish/1920/1080.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1>Kibbeh</h1>
+                        <p>Syria's national dish, a savory croquette made with bulgur and finely ground meat.</p>
+                        <a href="#recipes" class="btn">Explore Recipes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Shawarma -->
+            <div class="slide" style="background-image: url('https://picsum.photos/seed/shawarma-plate/1920/1080.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1>Syrian Shawarma</h1>
+                        <p>Experience the taste of the streets with our authentic, spiced, and perfectly roasted shawarma.</p>
+                        <a href="#recipes" class="btn">Explore Recipes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Fattoush -->
+            <div class="slide" style="background-image: url('https://picsum.photos/seed/fattoush-salad/1920/1080.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1>Fattoush Salad</h1>
+                        <p>A refreshing and crunchy salad with toasted pita, fresh vegetables, and a zesty sumac dressing.</p>
+                        <a href="#recipes" class="btn">Explore Recipes</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+                === HOW TO ADD A NEW SLIDE ===
+                1. Copy the entire block from <div class="slide" ...> to </div> (including the comment).
+                2. Paste it right above this comment block.
+                3. Change the background-image URL, the <h1> title, and the <p> description.
+                4. Go to the <div class="slider-dots"> section below and add a new <span class="dot"></span>.
+                ==============================
+            -->
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="slider-nav slider-prev">&#10094;</button>
+        <button class="slider-nav slider-next">&#10095;</button>
+
+        <!-- Dots Indicator -->
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <!-- 
+                === HOW TO ADD A NEW DOT ===
+                Add a new <span class="dot"></span> here for each new slide you add above.
+                ==============================
+            -->
         </div>
     </section>
 
@@ -559,7 +673,7 @@
             <p class="section-subtitle">Discover the authentic flavors of Syria with our collection of traditional recipes, from savory main dishes to refreshing salads</p>
             
             <div class="recipe-grid">
-                <!-- Kibbeh Recipe -->
+                <!-- Kibbeh Recipe Card -->
                 <article class="recipe-card">
                     <img src="https://picsum.photos/seed/kibbeh/600/400.jpg" alt="Kibbeh" class="recipe-img">
                     <div class="recipe-content">
@@ -573,9 +687,9 @@
                     </div>
                 </article>
 
-                <!-- Yabrak Recipe -->
+                <!-- Yabrak Recipe Card -->
                 <article class="recipe-card">
-                    <img src="https://picsum.photos/seed/yabrak/600/400.jpg" alt="Yabrak" class="recipe-img">
+                    <img src="https://z-cdn-media.chatglm.cn/files/9b722d14-9367-4251-95c8-c31735e9b60b.png?auth_key=1866018453-92706c0d60c14fa9b0fba40c2d247665-0-5e917c7814c3e688868cea8efd4d0143" alt="Yabrak" class="recipe-img">
                     <div class="recipe-content">
                         <h3 class="recipe-title">Yabrak (Stuffed Grape Leaves)</h3>
                         <p class="recipe-description">Tender grape leaves stuffed with a flavorful mixture of rice, herbs, and sometimes ground meat.</p>
@@ -587,7 +701,7 @@
                     </div>
                 </article>
 
-                <!-- Fattoush Recipe -->
+                <!-- Fattoush Recipe Card -->
                 <article class="recipe-card">
                     <img src="https://picsum.photos/seed/fattoush/600/400.jpg" alt="Fattoush" class="recipe-img">
                     <div class="recipe-content">
@@ -601,7 +715,7 @@
                     </div>
                 </article>
 
-                <!-- Shawarma Recipe -->
+                <!-- Shawarma Recipe Card -->
                 <article class="recipe-card">
                     <img src="https://picsum.photos/seed/shawarma/600/400.jpg" alt="Shawarma" class="recipe-img">
                     <div class="recipe-content">
@@ -615,7 +729,7 @@
                     </div>
                 </article>
 
-                <!-- Mujaddara Recipe -->
+                <!-- Mujaddara Recipe Card -->
                 <article class="recipe-card">
                     <img src="https://picsum.photos/seed/mujaddara/600/400.jpg" alt="Mujaddara" class="recipe-img">
                     <div class="recipe-content">
@@ -629,7 +743,7 @@
                     </div>
                 </article>
 
-                <!-- Makloubeh Recipe -->
+                <!-- Makloubeh Recipe Card -->
                 <article class="recipe-card">
                     <img src="https://picsum.photos/seed/makloubeh/600/400.jpg" alt="Makloubeh" class="recipe-img">
                     <div class="recipe-content">
@@ -661,7 +775,7 @@
                     <p>Through this blog, we hope to share the authentic flavors of Syria with you, preserving these treasured recipes and passing them on to future generations. Welcome to our culinary journey through the heart of the Levant.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://picsum.photos/seed/syriankitchen/600/500.jpg" alt="Syrian Kitchen">
+                    <img src="https://z-cdn-media.chatglm.cn/files/b385fc4d-2fff-4512-bcf3-11ccfc0e6048.png?auth_key=1866019073-05d5f8442e404cbcb1defc0474df442f-0-bf1c3fb3f876664f943bba6282f4c4fd" alt="Syrian Kitchen">
                 </div>
             </div>
         </div>
@@ -762,6 +876,68 @@
                     mainNav.classList.remove('active');
                 }
             });
+        });
+
+        // Hero Slider
+        const slidesWrapper = document.querySelector('.slides-wrapper');
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.slider-prev');
+        const nextBtn = document.querySelector('.slider-next');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        
+        // Function to show a specific slide
+        function showSlide(index) {
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+            
+            // Update slide position
+            slidesWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+        
+        // Event listeners for navigation buttons
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+        
+        // Event listeners for dots
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showSlide(i);
+            });
+        });
+        
+        // Auto-play slider
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000); // Change slide every 5 seconds
+        
+        // Pause auto-play on hover
+        const heroSlider = document.querySelector('.hero-slider');
+        heroSlider.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        heroSlider.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
         });
     </script>
 </body>
